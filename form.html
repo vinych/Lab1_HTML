@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+</head>
+<body>
+    <h1>Лабораторна робота №1</h1>
+    <h2>Робота з формами</h2>
+    <h2>Виконав студент групи КН-31(2) Ничипорук Віталій</h2>
+    <a href="index.html">На головну</a>
+
+    <h3>Завдання</h3>
+    <p>
+        Необхідно розробити форму для введення результатів поточної сесії у веб-систему. 
+        Необхідно заповнити наступні данні:
+    </p>
+    <ul>
+        <li>
+            дані про студента, включають ПІБ, назву групи (вибирається із
+            списку), оцінку за дисципліну (лише ціле значення від 0 до 100), дату
+            проведення заліку або іспиту;
+        </li>
+        <li>
+            дані про залік або іспит, включають назву дисципліни (вибирається
+            із списку), перемикач це залік чи іспит, прізвище викладача.
+        </li>
+    </ul>
+
+    <form method="POST">
+        <fieldset>
+            <legend>Дані про студента</legend>
+
+            <label>ПІБ студента:</label>
+            <input type="text" id="student_name"><br><br>
+
+            <label>Назва групи:</label>
+            <select>
+                <option>Оберіть групу</option>
+                <option>Група 1</option>
+                <option>Група 2</option>
+            </select><br><br>
+
+            <label>Оцінка за дисципліну (0-100):</label>
+            <input type="number" id="grade" min="0" max="100"><br><br>
+
+            <label>Дата проведення заліку/іспиту:</label>
+            <input type="date" id="exam_date"><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Дані про залік або іспит</legend>
+
+            <label>Назва дисципліни:</label>
+            <select>
+                <option>Оберіть дисципліну</option>
+                <option>Проектування та розробка веб-застосувань</option>
+                <option>Штучний інтелект</option>
+            </select><br><br>
+
+            <label>Тип:</label>
+            <input type="radio" id="credit">
+            <label>Залік</label>
+            <input type="radio" id="exam">
+            <label>Іспит</label><br><br>
+
+            <label>Прізвище викладача:</label>
+            <input type="text" id="teacher_name"><br><br>
+        </fieldset>
+
+        <button type="submit">Відправити</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>
